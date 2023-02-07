@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test for the list component test list of snapshot 1`] = `
+<ul
+  className="list"
+>
+  <li
+    data-testid="lists"
+  >
+    <div
+      className="li-div"
+    >
+      hello
+      <input
+        data-testid="checke1"
+        onClick={[Function]}
+        type="checkbox"
+      />
+    </div>
+  </li>
+  <li
+    data-testid="lists"
+  >
+    <div
+      className="li-div"
+    >
+      world
+      <input
+        data-testid="checke2"
+        onClick={[Function]}
+        type="checkbox"
+      />
+    </div>
+  </li>
+  <li
+    data-testid="lists"
+  >
+    <div
+      className="li-div"
+    >
+      !!!!
+      <input
+        data-testid="checke3"
+        onClick={[Function]}
+        type="checkbox"
+      />
+    </div>
+  </li>
+</ul>
+`;

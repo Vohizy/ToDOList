@@ -1,5 +1,7 @@
 import "./App.css";
 import React, { useState } from 'react'
+import List from "./Componnent/list";
+import Input from "./Componnent/input";
 
 
 function App() {
@@ -17,7 +19,7 @@ function App() {
        
       }
       const keys=(e)=>{
-        if(e.key==="Enter"){
+        if(e.key==="Enter"&&input!==""){
           setValue((list)=>[...list,input])
           setInput("")
         }
@@ -44,17 +46,8 @@ function App() {
       <h2>ToDo</h2>
         <div className="todo">
           <div className="contains-todo">
-            <input type="text" className="form-control" value={input} onChange={change} onKeyPress={keys} placeholder="enter your text" />
-            <ul className="list">
-              {value.map((values,index)=>(
-                <li key={index}>
-                  <div className="li-div">{values}
-                  <input type="checkbox" onClick={()=>{f(values,index)}} checked={check}/> 
-                  </div>
-                </li> 
-                
-              ))}
-            </ul>
+            <Input Change={change} KeyPress={keys} Input={input}/>
+            <List value={value} check={check} f={f} />
           </div>
         </div>
       </div>
@@ -62,13 +55,14 @@ function App() {
           <div className="block-toDone">
             <h2>Done</h2>
             <div className="todone">
-              <ul className="list">
+              <List value={newTab}/>
+              {/* <ul className="list">
                   {newTab.map((g) => (
                   <li>
                     <div className="li-div">{g}</div>
                   </li>
                   ))}
-              </ul>
+              </ul> */}
            </div>
           </div>
     </div>

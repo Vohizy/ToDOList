@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test for input test of snapshot 1`] = `
+<input
+  className="form-control"
+  data-testid="input"
+  onChange={[Function]}
+  onKeyPress={[Function]}
+  placeholder="enter your text"
+  type="text"
+  value={[Function]}
+/>
+`;
